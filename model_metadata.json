@@ -1,0 +1,22 @@
+{
+  "features": [
+    "Engine_size",
+    "Horsepower",
+    "Fuel_capacity",
+    "Fuel_efficiency",
+    "Vehicle_type"
+  ],
+  "target": "Price_in_thousands",
+  "rmse": 8.6849,
+  "r2_score": 0.6491,
+  "n_training": 124,
+  "n_testing": 31,
+  "avg_price": 27.391,
+  "top_car": "Ford F-Series",
+  "top_sales": 540.561,
+  "total_data": 155,
+  "vehicle_types": [
+    "Car",
+    "Passenger"
+  ]
+}
