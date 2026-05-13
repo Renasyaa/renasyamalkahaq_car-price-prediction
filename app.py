@@ -18,7 +18,6 @@ import os
 # ──────────────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Car Price Prediction System",
-    page_icon="🚗",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -420,7 +419,7 @@ except Exception as e:
 with st.sidebar:
     st.markdown("""
 <div style="
-    font-size:1.55rem;
+    font-size:1.7rem;
     font-weight:700;
     color:#818cf8;
     margin-bottom:0.3rem;
@@ -574,7 +573,9 @@ with col_result:
 
         predicted_price = model.predict(input_df)[0]
         predicted_usd   = predicted_price * 1000
-        predicted_idr   = predicted_usd * 17500          # ← konversi ke Rupiah (kurs tetap Rp17.500/USD)
+        predicted_idr   = predicted_usd * 17500    
+        
+        formatted_idr = f"{predicted_idr:,.0f}".replace(",", ".")      
 
         # Generate insight
         if predicted_price < 15:
@@ -599,7 +600,8 @@ with col_result:
           <div class="result-price-label">⬆ Estimasi Harga Pasar Kendaraan</div>
 
           <div class="result-price">
-            Rp{predicted_idr:,.0f}
+            Rp{formatted_idr}
+            
           </div>
           <div style="font-size:1.35rem; color:#94a3b8; font-weight:500; margin:0.3rem 0;">
             ≈ <strong style="color:#c7d2fe;">${predicted_usd:,.0f}</strong> USD
