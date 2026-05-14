@@ -419,12 +419,21 @@ except Exception as e:
 with st.sidebar:
     st.markdown("""
 <div style="
-    font-size:1.7rem;
+    font-size:2.0rem;
     font-weight:700;
     color:#818cf8;
     margin-bottom:0.3rem;
 ">
-Input Spesifikasi
+PriceDrive
+</div>
+
+<div style="
+    color:#94a3b8;
+    font-size:0.95rem;
+    line-height:1.7;
+    margin-bottom:1.5rem;
+">
+Machine Learning Based Car Price Prediction System
 </div>
 """, unsafe_allow_html=True)
     st.markdown("---")
